@@ -1,0 +1,48 @@
+Dr. Suess and Dr. Nunley!
+
+Description: My system generates and evaluates it own poem. The evaluation is based on
+how many lines the poem is. I made the generation because I really enjoy the
+aesthetic of multiple lines. Ergo, the more lines there are the higher the score
+is! The system takes in a series of Dr. Suess poems and makes a word dictionary.
+The dictionary maps every word to another dictionary of potential next words and
+their frequency they appear. So for example, we would have:
+    { 'when': {'you': 4, 'your': 2, 'our': 1, "she's": 1}, 'and': {'blue,': 1, 'i': 12, 'too': 1} }
+which means the statement "when you" appears 4 times and "and i" appears 12 times.
+The system picks a random first word from the keys in the dictionary. Then based
+on these frequencies, it probabilistically chooses the next words in the poem. And
+generates a poem - breaking it up by line by line to give an extra meaning.
+Then it evaluates the poem and reads it off in Alex's voice!
+
+Set Up and Run: To set up, all you need to do is to make sure that the Dr. Suess are in the
+right directory so that we aren't trying to access a directory that does exist. Then off of
+that all you need to do is press play and turn up the volume!
+
+Challenger: I was really challenged by creating a word dictionary in Python. I had
+completed a similar project previously but in Java. So accessing all the different dictionaries
+was definitely tricky and working with dictionaries inside dictionaries produced more issues.
+It was interesting experimenting with different ways to have my laptop project the poem that I had
+generated as well. Conceptually, this was a hard one to wrap my head around!
+
+
+Three Scholarly Papers:
+
+Poem Machine - a Co-creative NLG Web Application for Poem Writing
+https://helda.helsinki.fi/bitstream/handle/10138/261746/W18_6525.pdf?sequence=1
+
+This paper was incredibly interesting - especially considering it takes user input to help produce the
+poem. It also has a meter tool that helps users understand how to poetic meter works! After reading
+this one, I realized what I didn't want to do with my poem generator. I knew I didn't want user input.
+
+Generous Poetry Generator
+https://muse.jhu.edu/article/546045/summary
+
+This paper made me realize I wanted to use the combination of words based on their frequencies to
+generate a poetic structure. It also made me realize how visually inclined I am when reading a
+poem - meaning how much I enjoy a paper with varying lengths.
+
+SMUG: Scientific Music Generator
+http://axon.cs.byu.edu/ICCC2015proceedings/9.2Scirea.pdf
+
+This paper was so cool! While I don't consider myself a poet, I love music. So reading this paper
+was cool. By using the Markov Chain, they were able to compose music. So here I used a somewhat
+similar set up and generation process.
